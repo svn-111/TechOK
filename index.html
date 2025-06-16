@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechOK - Your Tech Destination</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to Content</a>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>TechOK</h1>
+            </div>
+
+            <div class="search-container">
+                <form id="search-form">
+                    <input type="search" id="search-input" placeholder="Search products..." aria-label="Search products">
+                    <button type="submit" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="cart.html">Cart <span id="cart-count">0</span></a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="#" id="logout-btn">Logout</a></li>
+                </ul>
+            </nav>
+
+            <button class="mobile-menu-button" aria-expanded="false" aria-controls="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav id="mobile-menu" class="mobile-nav" aria-hidden="true">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="cart.html">Cart <span id="mobile-cart-count">0</span></a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="#" id="mobile-logout-btn">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="hero">
+            <div class="container">
+                <h2>Discover the Latest Gadgets</h2>
+                <p>Shop the newest tech at unbeatable prices</p>
+                <a href="products.html" class="btn">Shop Now</a>
+            </div>
+        </section>
+
+        <section class="categories">
+            <div class="container">
+                <h2>Shop by Category</h2>
+                <div class="category-grid">
+                    <a href="products.html?category=mobile" class="category-card">
+                        <img src="images/image100.jpg" alt="Mobile Phones">
+                        <h3>Mobile Phones</h3>
+                    </a>
+                    <a href="products.html?category=laptop" class="category-card">
+                        <img src="images/image200.webp" alt="Laptops">
+                        <h3>Laptops</h3>
+                    </a>
+                    <a href="products.html?category=headphone" class="category-card">
+                        <img src="images/image300.jpg" alt="Headphones">
+                        <h3>Headphones</h3>
+                    </a>
+                    <a href="products.html?category=smartwatch" class="category-card">
+                        <img src="images/images400.jpg" alt="Smart Watches">
+                        <h3>Smart Watches</h3>
+                    </a>
+                    <a href="products.html?category=accessories" class="category-card">
+                        <img src="images/image500.png" alt="Accessories">
+                        <h3>Accessories</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-products">
+            <div class="container">
+                <h2>Featured Products</h2>
+                <div id="featured-products-container" class="product-grid">
+                    <!-- Products will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-section">
+                <h3>TechOK</h3>
+                <p>Your one-stop shop for the latest gadgets and technology.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="signup.html">Sign Up</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:support@techok.com">support@techok.com</a></p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2023 TechOK. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/64a297c639.js" crossorigin="anonymous"></script>
+    <script src="js/products-data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

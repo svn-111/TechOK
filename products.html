@@ -1,0 +1,229 @@
+<!-- products.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | TechOK</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Skip to Content Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to Content</a>
+
+   <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1><a href="index.html">TechOK</a></h1>
+            </div>
+            
+            <!-- Search Bar -->
+            <div class="search-container">
+                <form id="search-form" role="search">
+                    <input type="search" id="search-input" placeholder="Search products..." aria-label="Search products">
+                    <button type="submit" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+            
+            <!-- Navigation -->
+            <nav class="main-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="cart.html">Cart <span id="cart-count">0</span></a></li>
+                    <li><a href="profile.html" class="active">Profile</a></li>
+                    <li><a href="#" id="logout-btn">Logout</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-button" aria-expanded="false" aria-controls="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <nav class="mobile-nav" id="mobile-menu" aria-hidden="true">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html" class="active">Products</a></li>
+            <li><a href="cart.html">Cart <span id="mobile-cart-count">0</span></a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <div class="container">
+                <ol>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li id="current-category" aria-current="page">All Products</li>
+                </ol>
+            </div>
+        </nav>
+
+        <!-- Products Section -->
+        <section class="products-section">
+            <div class="container">
+                <div class="products-layout">
+                    <!-- Sidebar Filters -->
+                    <aside class="sidebar">
+                        <div class="filter-group">
+                            <h3>Categories</h3>
+                            <ul class="category-list" id="category-list">
+                                <li><a href="products.html" data-category="all" class="active">All Products</a></li>
+                                <li>
+                                    <a href="products.html?category=mobile" data-category="mobile">Mobile Phones</a>
+                                    <ul class="subcategory-list" id="mobile-subcategories">
+                                        <li><a href="products.html?category=mobile&subcategory=iphone">iPhone</a></li>
+                                        <li><a href="products.html?category=mobile&subcategory=samsung">Samsung</a></li>
+                                        <li><a href="products.html?category=mobile&subcategory=oneplus">OnePlus</a></li>
+                                        <li><a href="products.html?category=mobile&subcategory=xiaomi">Xiaomi</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="products.html?category=laptop" data-category="laptop">Laptops</a>
+                                    <ul class="subcategory-list" id="laptop-subcategories">
+                                        <li><a href="products.html?category=laptop&subcategory=apple">Apple</a></li>
+                                        <li><a href="products.html?category=laptop&subcategory=dell">Dell</a></li>
+                                        <li><a href="products.html?category=laptop&subcategory=hp">HP</a></li>
+                                        <li><a href="products.html?category=laptop&subcategory=lenovo">Lenovo</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="products.html?category=headphone" data-category="headphone">Headphones</a>
+                                    <ul class="subcategory-list" id="headphone-subcategories">
+                                        <li><a href="products.html?category=headphone&subcategory=sony">Sony</a></li>
+                                        <li><a href="products.html?category=headphone&subcategory=bose">Bose</a></li>
+                                        <li><a href="products.html?category=headphone&subcategory=apple">Apple</a></li>
+                                        <li><a href="products.html?category=headphone&subcategory=sennheiser">Sennheiser</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="products.html?category=smartwatch" data-category="smartwatch">Smart Watches</a>
+                                    <ul class="subcategory-list" id="smartwatch-subcategories">
+                                        <li><a href="products.html?category=smartwatch&subcategory=apple">Apple Watch</a></li>
+                                        <li><a href="products.html?category=smartwatch&subcategory=samsung">Samsung</a></li>
+                                        <li><a href="products.html?category=smartwatch&subcategory=fitbit">Fitbit</a></li>
+                                        <li><a href="products.html?category=smartwatch&subcategory=garmin">Garmin</a></li>
+                                    </ul>
+                                </li>
+								<li>
+                                <a href="products.html?category=accessories" data-category="accessories">Accessories</a>
+                                <ul id="accessories-subcategories" class="subcategory-list">
+                                    <li><a href="products.html?category=accessories&subcategory=mobile-accessories">Mobile Accessories</a></li>
+                                    <li><a href="products.html?category=accessories&subcategory=laptop-accessories">Laptop Accessories</a></li>
+                                </ul>
+                            </li>
+                            </ul>
+                        </div>
+
+                        <div class="filter-group">
+                            <h3>Price Range</h3>
+                            <div class="price-range">
+                                <input type="range" id="price-range" min="0" max="2000" value="2000" step="50">
+                                <div class="price-values">
+                                    <span>$0</span>
+                                    <span id="max-price">$2000</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter-group">
+                            <h3>Brand</h3>
+                            <div class="brand-filter">
+                                <label>
+                                    <input type="checkbox" name="brand" value="apple"> Apple
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="brand" value="samsung"> Samsung
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="brand" value="sony"> Sony
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="brand" value="dell"> Dell
+                                </label>
+								<label><input type="checkbox" name="brand" value="dell"> Dell</label>
+                            <label><input type="checkbox" name="brand" value="hp"> HP</label>
+                            <label><input type="checkbox" name="brand" value="lenovo"> Lenovo</label>
+                            <label><input type="checkbox" name="brand" value="oneplus"> OnePlus</label>
+                            <label><input type="checkbox" name="brand" value="xiaomi"> Xiaomi</label>
+                            <label><input type="checkbox" name="brand" value="bose"> Bose</label>
+                            <label><input type="checkbox" name="brand" value="sennheiser"> Sennheiser</label>
+                            <label><input type="checkbox" name="brand" value="fitbit"> Fitbit</label>
+                            <label><input type="checkbox" name="brand" value="garmin"> Garmin</label>
+                            <label><input type="checkbox" name="brand" value="anker"> Anker</label>
+                            <label><input type="checkbox" name="brand" value="belkin"> Belkin</label>
+                            <label><input type="checkbox" name="brand" value="logitech"> Logitech</label>
+                            </div>
+                        </div>
+                    </aside>
+
+                    <!-- Main Products Area -->
+                    <div class="products-main">
+                        <div class="products-header">
+                            <h2 id="products-heading">All Products</h2>
+                            <div class="sort-options">
+                                <label for="sort-by">Sort by:</label>
+                                <select id="sort-by">
+                                    <option value="default">Default</option>
+                                    <option value="price-low">Price: Low to High</option>
+                                    <option value="price-high">Price: High to Low</option>
+                                    <option value="rating">Rating</option>
+                                    <option value="name-asc">Name: A-Z</option>
+                                    <option value="name-desc">Name: Z-A</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="products-grid" id="products-grid">
+                            <!-- Products will be loaded via JavaScript -->
+                        </div>
+
+                        <div class="pagination" id="pagination">
+                            <!-- Pagination will be loaded via JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-section">
+                <h3>TechOK</h3>
+                <p>Your one-stop shop for the latest gadgets and technology.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@techok.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+        </div>
+        <div class="copyright">
+        </div>
+    </footer>
+
+    <script src="js/products-data.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/products.js"></script>
+</body>
+</html>

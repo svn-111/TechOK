@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | TechOK</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Skip to Content Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to Content</a>
+
+    <!-- Header Section (Logo Only) -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1><a href="login.html">TechOK</a></h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Login Section -->
+        <section class="auth-section" aria-labelledby="login-heading">
+            <div class="container">
+                <h2 id="login-heading">Login to Your Account</h2>
+                <form id="login-form" class="auth-form">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required aria-label="Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required aria-label="Password">
+                    </div>
+                    <button type="submit" class="auth-btn">Login</button>
+                    <p class="forgot-pass"> <a href="login.html">Forgot Password?</a></p>
+                    <p class="auth-link">Don't have an account? <a href="signup.html">Sign Up</a></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-section">
+                <h3>TechOK</h3>
+                <p>Your one-stop shop for the latest gadgets and technology.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Cart</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Sign Up</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@techok.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+        </div>
+        <div class="copyright">
+           
+        </div>
+    </footer>
+
+    <script src="js/users.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>

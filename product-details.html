@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details | TechOK</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/product-details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Skip to Content Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to Content</a>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1><a href="index.html">TechOK</a></h1>
+            </div>
+            
+            <!-- Search Bar -->
+            <div class="search-container">
+                <form id="search-form" role="search">
+                    <input type="search" id="search-input" placeholder="Search products..." aria-label="Search products">
+                    <button type="submit" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+            
+            <!-- Navigation -->
+            <nav class="main-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="cart.html">Cart <span id="cart-count">0</span></a></li>
+                    <li><a href="profile.html" class="active">Profile</a></li>
+                    <li><a href="#" id="logout-btn">Logout</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-button" aria-expanded="false" aria-controls="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <nav class="mobile-nav" id="mobile-menu" aria-hidden="true">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="cart.html">Cart <span id="mobile-cart-count">0</span></a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <div class="container">
+                <ol>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li id="product-category"><a href="#">Category</a></li>
+                    <li id="product-subcategory"><a href="#">Subcategory</a></li>
+                    <li id="current-product" aria-current="page">Product Details</li>
+                </ol>
+            </div>
+        </nav>
+
+        <!-- Product Detail Section -->
+        <section class="product-detail" aria-labelledby="product-title">
+            <div class="container">
+                <div class="product-detail-layout">
+                    <div class="product-image-container">
+                        <img id="product-image" src="" alt="" class="product-image">
+                    </div>
+                    <div class="product-info-container">
+                        <h2 id="product-title"></h2>
+                        <div class="product-rating">
+                            <span id="product-rating-stars"></span>
+                            <span id="product-rating-value"></span>
+                        </div>
+                        <p class="product-price" id="product-price"></p>
+                        <p class="product-description" id="product-description"></p>
+                        
+                        <!-- Color Options -->
+                        <div class="product-options">
+                            <h3>Color</h3>
+                            <div class="color-options" id="color-options">
+                                <!-- Colors will be dynamically populated -->
+                            </div>
+                        </div>
+                        
+                        <!-- Quantity Selector -->
+                        <div class="product-options">
+                            <h3>Quantity</h3>
+                            <div class="quantity-selector">
+                                <button class="quantity-btn" id="decrease-quantity" aria-label="Decrease quantity">-</button>
+                                <input type="number" id="quantity" value="1" min="1" aria-label="Quantity">
+                                <button class="quantity-btn" id="increase-quantity" aria-label="Increase quantity">+</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Shipping Options -->
+                        <div class="product-options">
+                            <h3>Shipping</h3>
+                            <select id="shipping-options" aria-label="Select shipping method">
+                                <option value="standard">Standard Shipping ($5.00)</option>
+                                <option value="express">Express Shipping ($15.00)</option>
+                                <option value="overnight">Overnight Shipping ($25.00)</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Action Buttons -->
+                        <div class="product-actions">
+                            <button class="add-to-cart" id="add-to-cart" data-id="">Add to Cart</button>
+                            <button class="buy-now" id="buy-now">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-section">
+                <h3>TechOK</h3>
+                <p>Your one-stop shop for the latest gadgets and technology.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@techok.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+        </div>
+        <div class="copyright">
+        </div>
+    </footer>
+
+    <script src="js/products-data.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/product-details.js"></script>
+</body>
+</html>
